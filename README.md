@@ -5,7 +5,7 @@
 This repo provides the MultiSim test generation approach, a testing technique which combines an ensemble of simulator during search-based testing to identify simulator-agnostic failures. This repo provides the integration of a LKAS case where a DNN model is tested in navigating a car on a road without obstacles. Integrated simulators are Donkey, Udacity and BeamNG. The framework builds upon [OpenSBT](https://github.com/opensbt/opensbt-core) 0.1.7.
 
 <div align="center">
-  <img src="/images/simulators_intro.png" height="300" style="width: auto; background-color: rgb(44,46,57);"/>
+  <img src="/images/simulators_intro.png" height="300" width="1600" style="background-color: rgb(44,46,57);"/>
 </div>
 
 # Installation
