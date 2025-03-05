@@ -2,7 +2,7 @@
 [ Content will be added soon! ]
 
 
-This repo provides the MultiSim test generation approach, a testing technique which combines an ensemble of simulator during search-based testing to identify simulator-agnostic failures. This repo provides the integration of a LKAS case where a DNN model is tested in navigating a car on a road without obstacles. Integrated simulators are Donkey, Udacity and BeamNG. The framework builds upon [OpenSBT](https://github.com/opensbt/opensbt-core) 0.1.7.
+This repo provides the MultiSim test generation approach, a testing technique which combines an ensemble of simulators during search-based testing to identify simulator-agnostic failures. This repo provides the integration of a LKAS case study where a DNN model is tested in navigating a car on a road without obstacles. Integrated simulators are Donkey, Udacity and BeamNG. The framework builds upon [OpenSBT](https://github.com/opensbt/opensbt-core) 0.1.7.
 
 <img align="center" src="/images/simulators_intro.png" height="200"/>
 
@@ -142,7 +142,7 @@ The folder is structured as follows:
 
 You can find all roads used for validation [here](sup/validation/roads/).
 The detailed validation results are available in the respective simulator related folder.
-The overall validation result with five 10 reexecutions is:
+The overall validation result with 10 reexecutions is:
 
 <div align="center">
   <img src="/sup/validation/preliminary_validation_u-d-b.png" height="400" style="background-color: rgb(44,46,57);"/>
@@ -158,6 +158,11 @@ Overview of Hypervolume over time.
 
 # Authors
 
-<a href="https://github.com/leviathan321">
-  <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" width="30" height="30">
-</a> Lev Sorokin | lev.sorokin@tum.de
+<table>
+  <tr>
+    <td><a href="https://github.com/leviathan321">
+      <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" width="30" height="30">
+    </a></td>
+    <td>Lev Sorokin | lev.sorokin@tum.de</td>
+  </tr>
+</table>
