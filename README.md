@@ -100,6 +100,11 @@ To run the efficiency analysis run the correspnding script  as follows (only aft
 TODO
 ```
 
+# Results
+
+The detailed results shown in the paper can be found in the folder [results](/results/) and seperated by RQ.
+
+
 # Visualization
 
 To generate the stacked plot results use the following script:
@@ -122,6 +127,7 @@ TODO
 
 
 
+
 # Supplementary Material
 
 You can find the supplementary material of our study in the folder [sup](sup/).
@@ -136,13 +142,17 @@ You can find all roads used for validation [here](sup/validation/roads/).
 The detailed validation results are available in the respective simulator related folder.
 The overall validation result with five 10 reexecutions is:
 
-![](/sup/validation/preliminary_validation_u-d-b.pdf)
+<div align="center">
+  <img src="/sup/validation/preliminary_validation_u-d-b.png" height="400" style="background-color: rgb(44,46,57);"/>
+</div>
 
 ## Convergence
 
 Overview of Hypervolume over time.
 
-![](/sup/convergence/subplots_combined_error_relative.pdf)
+<div align="center">
+  <img src="/sup/convergence/subplots_combined_error_relative.png" height="400" style="background-color: rgb(44,46,57);"/>
+</div>
 
 # Authors
 
