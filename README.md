@@ -4,9 +4,7 @@
 
 This repo provides the MultiSim test generation approach, a testing technique which combines an ensemble of simulator during search-based testing to identify simulator-agnostic failures. This repo provides the integration of a LKAS case where a DNN model is tested in navigating a car on a road without obstacles. Integrated simulators are Donkey, Udacity and BeamNG. The framework builds upon [OpenSBT](https://github.com/opensbt/opensbt-core) 0.1.7.
 
-<div align="center">
-  <img src="/images/simulators_intro.png" height="300"/>
-</div>
+<img align="center" src="/images/simulators_intro.png" height="200"/>
 
 # Installation
 
@@ -160,5 +158,6 @@ Overview of Hypervolume over time.
 
 # Authors
 
-Lev Sorokin \
-lev.sorokin@tum.de
+<a href="https://github.com/leviathan321">
+  <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" width="30" height="30">
+</a> Lev Sorokin | lev.sorokin@tum.de
