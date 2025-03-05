@@ -1,0 +1,7 @@
+UD_-_SSIM-D,p_value,effect
+valid_rate,0.322265625,0.66
+n_valid,0.6784023758521882,0.53
+fmap_cov,0.5936305914425295,0.56
+fmap_s,0.921875,0.515
+fmap_fs,0.921875,0.515
+avg_euclid,1.0,0.58

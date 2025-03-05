@@ -1,0 +1,7 @@
+DB-P_-_UD,p_value,effect
+valid_rate,0.001953125,0.95
+n_valid,0.16015625,0.635
+fmap_cov,0.16015625,0.645
+fmap_s,0.625,0.305
+fmap_fs,0.625,0.305
+avg_euclid,0.625,0.52

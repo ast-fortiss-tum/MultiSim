@@ -1,0 +1,7 @@
+UB_-_SSIM-B,p_value,effect
+valid_rate,0.76953125,0.49
+n_valid,0.013671875,0.215
+fmap_cov,0.0438255837769098,0.26
+fmap_s,0.375,0.41
+fmap_fs,0.375,0.41
+avg_euclid,0.130859375,0.28

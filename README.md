@@ -50,12 +50,99 @@ Consider to specify the simulator in the simulate function of the experiment def
 
 ## Running DSS Experiments
 
+To run a DSS experiment after completed MultiSim you can run the scripts:
+
+```bash
 TODO
+```
+
+## Running MultiSim with Prediction
+
+To run MultiSim with a disagreement predictor, first you need to train the classifier.
+You can train the classifier using this script (you can adopt the config in the top of the script, considering hyperparameters e.g.)
+
+
+```bash
+TODO
+```
+
+Now you can run a prediction based MultiSim search by assigning the predictor in the config.py file and
+selecting the XZY Problem from the extended OpenSBT. As an example you should be able to run the experiment:
+
+```bash
+TODO
+```
+
+
 # Validation
+
+To run validation for MultiSim, SingleSim or DSS run the following scripts (based on the simulator combination).
+
+```bash
+TODO
+```
 
 # Analysis
 
-# Results and Supplementary Material
+## RQ1. Effectiveness
+
+To run the effectiveness analysis run the correspnding script  as follows  (only after validation is completed):
+
+```bash
+TODO
+```
+
+## RQ2. Efficiency
+
+To run the efficiency analysis run the correspnding script  as follows (only after validation is completed):
+
+```bash
+TODO
+```
+
+# Visualization
+
+To generate the stacked plot results use the following script:
+
+```bash
+TODO
+```
+
+To run the statistical significance test use this script:
+
+```bash
+TODO
+```
+
+The boxplots for RQ3 can be created using the following command.
+
+```bash
+TODO
+```
+
+
+
+# Supplementary Material
+
+You can find the supplementary material of our study in the folder [sup](sup/).
+The folder is structured as follows:
+
+- [sup/validation](sup/validation/): Contains the preliminary driving performance evaluation in all three simulators on 16 predefined roads.
+- [sup/convergence](sup/convergence/): Contains Hypervolume results assessing the convergence of MultiSim and SingleSim.
+
+## Validation
+
+You can find all roads used for validation [here](sup/validation/roads/).
+The detailed validation results are available in the respective simulator related folder.
+The overall validation result with five 10 reexecutions is:
+
+![](/sup/validation/preliminary_validation_u-d-b.pdf)
+
+## Convergence
+
+Overview of Hypervolume over time.
+
+![](/sup/convergence/subplots_combined_error_relative.pdf)
 
 # Authors
 
