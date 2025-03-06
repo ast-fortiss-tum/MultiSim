@@ -1,0 +1,1 @@
+taskkill /IM "BeamNG.drive.x64.exe" /F

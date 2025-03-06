@@ -1,0 +1,1 @@
+taskkill /IM "donkey_sim.exe" /F

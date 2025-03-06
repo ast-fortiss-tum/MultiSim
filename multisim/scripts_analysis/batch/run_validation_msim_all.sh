@@ -1,0 +1,7 @@
+bash scripts_analysis/batch/run_validation_combined_msim_b.sh
+# bash scripts_analysis/batch/run_validation_combined_msim_d.sh
+bash scripts_analysis/batch/run_validation_combined_msim_u.sh
+
+bash scripts_analysis/batch/run_validation_combined_msim_db.sh
+bash scripts_analysis/batch/run_validation_combined_msim_ub.sh
+bash scripts_analysis/batch/run_validation_combined_msim_du.sh

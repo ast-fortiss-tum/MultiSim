@@ -1,0 +1,3 @@
+bash scripts_analysis/dss/run_validation_dsim_b.sh
+bash scripts_analysis/dss/run_validation_dsim_d.sh
+bash scripts_analysis/dss/run_validation_dsim_u.sh

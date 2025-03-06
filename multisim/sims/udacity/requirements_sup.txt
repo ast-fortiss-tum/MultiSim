@@ -1,0 +1,5 @@
+setuptools==65.5.0
+wheel==0.38.4
+eventlet==0.33.3
+# numpy==1.22.1
+Werkzeug==2.2.2

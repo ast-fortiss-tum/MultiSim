@@ -1,5 +1,5 @@
 # MultiSim - Replication Package for the Paper "Simulator Ensembles for Trustworthy Autonomous Driving Testing"
-[ Content will be added soon! ]
+[ More Content will be added soon! ]
 
 
 This repo provides the MultiSim test generation approach, a testing technique which combines an ensemble of simulators during search-based testing to identify simulator-agnostic failures. This repo provides the integration of a LKAS case study where a DNN model is tested in navigating a car on a road without obstacles. Integrated simulators are Donkey, Udacity and BeamNG. The framework builds upon [OpenSBT](https://github.com/opensbt/opensbt-core) 0.1.7.
@@ -10,9 +10,11 @@ This repo provides the MultiSim test generation approach, a testing technique wh
 
 To run the case study you have to Download the Donkey/Udacity simulator from this [link](https://drive.google.com/drive/folders/1e12fFeoqyd_IcheTL-48Nzp4pwOIQ4YE?usp=sharing). The BeamNG simulators is accessable upon request via [here](https://register.beamng.tech/). The DNN model (the SUT) can be downloaded from [here](https://drive.switch.ch/index.php/s/fMkAVQSCO5plOBZ?path=%2Flogs%2Fmodels). The best performing model considering previous research is the Dave2 model.
 
+The code is in the folder called `multisim`. All following operations have to be performed within this folder.
+
 You have to update then the DNN_MODEL_PATH and DONKEY_EXE_PATH variable in the config.py file in this project.
 
-First, you need to install a Python 3.8 virtual environment in this project. After you have activated the environment, install the projects requirements by:
+First, you need to install a Python 3.8 virtual environment in this project. After you have activated the environment, install the projects requirements:
 
 ```bash
 bash install.sh
@@ -35,7 +37,7 @@ To configure thresholds such as the maximal speed of the SUT, criticality thresh
 You can find multi sim experiments in multi_experiments.py. One example experiment which uses Donkey and Udacity as an ensemble can be run via:
 
 ```bash
-python run.py -e 62
+python run.py -e 64
 ```
 
 Multi Simulator related fitness functions are defined in `fitness.migration`.
@@ -61,27 +63,28 @@ TODO
 ## Running MultiSim with Prediction
 
 To run MultiSim with a disagreement predictor, first you need to train the classifier.
-You can train the classifier using this script (you can adopt the config in the top of the script, considering hyperparameters e.g.)
+You can train the classifier using this script (you can adopt the config in the top of the script, considering hyperparameters e.g.):
 
 
 ```bash
-TODO
+python -m prediction.disagree_predict
 ```
 
-Now you can run a prediction based MultiSim search by assigning the predictor in the config.py file and
-selecting the XZY Problem from the extended OpenSBT. As an example you should be able to run the experiment:
+Now you can run a prediction based MultiSim search by assigning the predictor in the config.py (DISAGREE_CLASSIFIER_1) file and
+selecting the `ADSMultiSimAgreementProblemDiversePredict` Problem from the extended OpenSBT problem. As an example, you should be able to run the experiment:
 
 ```bash
-TODO
+python run.py -e 67
 ```
 
 
 # Validation
 
-To run validation for MultiSim, SingleSim or DSS run the following scripts (based on the simulator combination).
+To run in addition validation for MultiSim, SingleSim or DSS you can use specific flags when calling the run function, or by execution specific sripts after completed search. To run validation for DB in Udacity run the following for instance:
+
 
 ```bash
-TODO
+bash scripts_analysis/run_validation_db_u.sh 
 ```
 
 # Analysis

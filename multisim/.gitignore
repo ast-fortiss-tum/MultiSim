@@ -1,0 +1,59 @@
+# IDE
+.vscode/
+*.code-workspace
+
+# Python
+env/
+**/__pycache__/
+build/
+**/*.pyc
+dist
+
+# CARLA
+cache/
+
+# Logging
+**/*log.txt
+
+# Results
+results/simoutput
+results/
+results_old/
+
+# Egg
+test_case_generation.egg-info
+
+venv/
+
+# Temporary files
+carla_simulation/temp
+
+# simulator
+**/sim/**
+
+# nn models
+**/*.h5
+
+**/images/**
+
+data/*
+
+venv*/*
+
+#vides
+**/*.wmv
+**/*.mpeg
+
+analysis/**/**.json
+analysis_*
+
+**/not_valid*
+
+road_generator/*.png
+
+*.log
+
+qa_analysis/output/**
+
+scripts_analysis/time/out/**
+prediction

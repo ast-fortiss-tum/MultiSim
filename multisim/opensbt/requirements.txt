@@ -1,0 +1,15 @@
+deap
+numpy
+scipy
+matplotlib
+pandas
+setuptools
+scikit-learn
+pymoo==0.6.0.1
+dill
+psutil
+pympler
+mlxtend
+k_means_constrained
+docker
+seaborn

@@ -1,0 +1,3 @@
+bash scripts_analysis/batch/run_validation_msim_all.sh
+bash scripts_analysis/ov/run_generate_overview_runs.sh
+python -m scripts_analysis.plot.generate_boxplots_from_overview
