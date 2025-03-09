@@ -6,6 +6,17 @@ This repo provides the MultiSim test generation approach, a testing technique wh
 
 <img align="center" src="/images/simulators_intro.png" height="200"/>
 
+## Table of Contents
+
+- [Installation](#installation)  
+- [Search Execution](#search-execution)  
+- [Validation](#validation)  
+- [Analysis](#analysis)  
+- [Results](#results)  
+- [Visualization](#visualization)  
+- [Supplementary Material](#supplementary-material)  
+- [Authors](#authors)  
+
 # Installation
 
 To run the case study you have to Download the Donkey/Udacity simulator from this [link](https://drive.google.com/drive/folders/1e12fFeoqyd_IcheTL-48Nzp4pwOIQ4YE?usp=sharing). The BeamNG simulators is accessable upon request via [here](https://register.beamng.tech/). The DNN model (the SUT) can be downloaded from [here](https://drive.switch.ch/index.php/s/fMkAVQSCO5plOBZ?path=%2Flogs%2Fmodels). The best performing model considering previous research is the Dave2 model.
