@@ -70,15 +70,6 @@ def get_first_last_valid(path_all_tests,
     if len(evaluation_num_valid) == 0:
         road_index_first = None
         road_index_last = None
-
-         # # write done
-        # with open(save_folder + os.sep + f'{output_filename_prefix}.csv', 'w', encoding='UTF8', newline='') as f:
-        #     write_to = csv.writer(f)
-        #     header = ['item', 'evaluation', 'test']
-        #     write_to.writerow(header)
-        #     write_to.writerow([f'first_valid', 30, None])
-        #     write_to.writerow([f'last_valid', 30, None])
-        # we set the maximum number of evals of 600 if non valid was found
         return  [max_evals, max_evals, None, None]
     else:
 
@@ -87,55 +78,8 @@ def get_first_last_valid(path_all_tests,
         # print("evaluations_valid", evaluation_num_valid)
         road_index_first = np.argmin(evaluation_num_valid)          
         road_index_last = np.argmax(evaluation_num_valid)
-        
-        # print("road_index_first", road_index_first)
-        # print("road_index_last", road_index_last)  
-        # print("len valid", len(angles_valid))
-
-        # print("first valid road:", angles_valid[road_index_first])
-        # print("found at:", min(evaluation_num_valid))
-        
-        # print("last valid road:", angles_valid[road_index_last])
-        # print("found at:", max(evaluation_num_valid))
-        
-        # # write done
-        # with open(save_folder + os.sep + f'{output_filename_prefix}.csv', 'w', encoding='UTF8', newline='') as f:
-        #     write_to = csv.writer(f)
-        #     header = ['item', 'evaluation', 'test']
-        #     write_to.writerow(header)
-        #     write_to.writerow([f'first_valid', min(evaluation_num_valid), angles_valid[road_index_first]])
-        #     write_to.writerow([f'last_valid', max(evaluation_num_valid), angles_valid[road_index_last]])
-
+       
     return  [min(evaluation_num_valid), max(evaluation_num_valid),  angles_valid[road_index_first], angles_valid[road_index_last]]
-
-###########################
-
-# paths = [
-#         "../msim-results/analysis/analysis_5-runs_12-12-2024_BU",
-#         "../msim-results/analysis/analysis_5-runs_11-11-2024_DB/",
-#         "../msim-results/analysis/analysis_5-runs_29-11-2024_UD/"
-
-#     ]
-
-# validation_folders = [
-#     "validation_count-3_combined_d",
-#     "validation_combined_count-3_u",
-#     "validation_combined_count-3_b"
-# ]
-
-# sim_map = [
-#         "msim",
-#         "msim",
-#         "msim"
-# ]
-
-# sim_names = [
-#     "ub",
-#     "bd",
-#     "ud"
-# ]
-
-# save_folder_all = r"..\msim-results\analysis\analysis_5-runs_msim_more_10-12-24\\"
 
 def get_first_last_valid_all(paths,
                              validation_folders,

@@ -65,11 +65,12 @@ Consider to specify the simulator in the simulate function of the experiment def
 
 ## Running DSS Experiments
 
-To run a DSS experiment after completed MultiSim you can run the scripts:
+To run a DSS experiment after completed MultiSim execution you can run for instance the following script, which execute tests found by BeamNG (b) in Donkey (d), and vice versa, followed by union of resulting feature maps.
 
 ```bash
-TODO
+bash dsim/run_migrate_and_simulate_bd.sh
 ```
+Related scripts which run DSS for the combinations BeamNG + Udacity, and Udacity and Donkey with DSS are available in the same folder.
 
 ## Running MultiSim with Prediction
 
@@ -91,30 +92,77 @@ python run.py -e 67
 
 # Validation
 
-To run in addition validation for MultiSim, SingleSim or DSS you can use specific flags when calling the run function, or by execution specific sripts after completed search. To run validation for DB in Udacity run the following for instance:
+To run in addition validation for MultiSim, SingleSim you can use the flag `-v` when calling the run function, or isolated from search by executing the following script (which execution 5 times each failures in the simulators Udacity and Donkey):
 
+```python
+python -m scripts_analysis.validation
+    --n_repeat_validation 5 \
+    --write_results_extended \
+    --save_folder "results/<path>" \
+    --simulators "udacity" "donkey" \
+    --percentage_validation 100 \
+    --folder_name_combined_prefix "validation_combined_" \
+    --folder_validation_prefix "validation_" \
+    --do_combined \
+    --only_failing_cells
+```
+
+# Analysis
+
+## Exhaustive Testing
+
+To execute multple experiments in sequence the following script can be used. Inside the script the experiment number (whether SingleSim, MulitSim or DSS related) with search parameters and seeds can be defined. The results will be stored seed-wise in the results folder with the given name.
+
+```bash
+bash scripts_analysis/run_exp_multi.sh
+```
+## Validation
+
+To run validation for DB in Udacity run the following for instance (inside the scripts the path to the results might need to be adopted):
 
 ```bash
 bash scripts_analysis/run_validation_db_u.sh 
 ```
 
-# Analysis
+To run validation for DSS using BeamNG and Donkey you need for instance to execute the following script (inside the script the path to the results might need to be adopted):
+
+```bash
+bash scripts_analysis/dss_all/run_validation_dsim_u.sh 
+```
+
 
 ## RQ1. Effectiveness
 
-To run the effectiveness analysis run the correspnding script  as follows  (only after validation is completed):
+To run the effectiveness analysis after completed search run the corresponding script  as follows  (only after validation is completed, sim_path indicates the results subfolder (msim or sim_1)):
 
-```bash
-TODO
+```python
+python scripts_analysis.ov.generate_overview_runs --folder_path "results/<path_to_results>" \ 
+                 --combo "bd_u" \
+                 --sim_path "sim_1" \
+                 --save_folder "<output_path>
+                 --sim "udacity" \
+                 --seeds 120 123 \
+                 --metrics_names 'valid_rate' 'n_valid'
 ```
+
+The script calculate an overview over 2 runs for instance for the metrics valid_rate and n_valid for the stored results.
 
 ## RQ2. Efficiency
 
-To run the efficiency analysis run the correspnding script  as follows (only after validation is completed):
+To run the efficiency analysis run the dedicated script as follows (only after validation is completed):
 
-```bash
-TODO
+```python
+python -m scripts_analysis.get_first_last_valid_new_time \
+  --paths "../msim-results/analysis/analysis_runs_20-12-2024_BD/" \
+  --validation_folders "validation_combined_count-3_u" \
+  --sim_map "msim" \
+  --sim_names "bd" \
+  --save_folder_all "../msim-results/analysis/analysis_runs_20-12-2024_BD//" \
+  --seeds 29 120 348 655 684 702 760 794 859 904 \
+  --n_runs 10
 ```
+
+In this example the MultiSim BD combination is evaluated on 10 executed runs for instance.
 
 # Results
 
@@ -123,26 +171,30 @@ The detailed results shown in the paper can be found in the folder [results](/re
 
 # Visualization
 
-To generate the stacked plot results use the following script:
+To generate the stacked plot results use the following command:
 
-```bash
-TODO
+```python
+python -m scripts_analysis.stack.generate_stacked_plot \
+                            --folder_paths  "../msim-results/analysis/analysis_runs_20-12-2024_BD/" \
+                                            "../msim-results/analysis/analysis_runs_26-12-2024_BU/" \
+                                            "../msim-results/analysis/analysis_runs_08-01-2025_UD/" \
+                            --combos "u" "d" "b" \
+                            --sim_paths "msim" "msim" "msim"\
+                            --sims "BD" "BU" "UD" \
+                            --plot_names "BD" "BU" "UD"\
+                            --n_runs 3 \
+                            --seeds  702 794 655\
+                            --save_folder "../msim-results/analysis/analysis_runs_01-2025/stacked_plot/" \
+                            --is_dss 0 0 0
 ```
 
-To run the statistical significance test use this script:
+The script will generate in this example a stacked plot visualizing the number of failures and valid failures for three compared approach.
+
+To run the statistical significance test use this script: The paths to the results need to be indicated in the script.
 
 ```bash
-TODO
+python -m scripts_analysis.evaluate_stat_sign
 ```
-
-The boxplots for RQ3 can be created using the following command.
-
-```bash
-TODO
-```
-
-
-
 
 # Supplementary Material
 
