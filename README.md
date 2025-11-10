@@ -1,6 +1,6 @@
 # MultiSim - Replication Package for the Paper "Simulator Ensembles for Trustworthy Autonomous Driving Testing"
 
-📌 *More content will be added soon! :) 📌
+⚠️ **Note:** More content will be added soon!
 
 This repo provides the MultiSim test generation approach, a testing technique that combines an ensemble of simulators during search-based testing to identify simulator-agnostic failures. This repo provides the integration of an LKAS case study where a DNN model is tested in navigating a car on a road without obstacles. Integrated simulators are Donkey, Udacity, and BeamNG. The framework builds upon [OpenSBT](https://github.com/opensbt/opensbt-core) 0.1.7. Some parts of the code are taken and adapted from the [Digital Siblings approach](https://github.com/testingautomated-usi/maxitwo).
 
