@@ -1,4 +1,4 @@
-# MultiSim - Replication Package for the Paper "Simulator Ensembles for Trustworthy Autonomous Driving Testing"
+# MultiSim - Replication Package for the Paper "Simulator Ensembles for Trustworthy Autonomous Driving Systems Testing"
 
 ⚠️ **Note:** More content will be added soon!
 
