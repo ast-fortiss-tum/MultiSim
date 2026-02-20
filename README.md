@@ -230,14 +230,15 @@ If you use our work in your research, or it helps it, or if you simply like it, 
 Here is an example BibTeX entry:
 
 ```
-@misc{2025-Sorokin-arxiv,
-	title        = {Simulator Ensembles for Trustworthy Autonomous Driving Testing},
-	author       = {Lev Sorokin and Matteo Biagiola and Andrea Stocco},
-	year         = {2025},
-	eprint       = {2503.08936},
-	archivePrefix = {arXiv},
-	primaryClass = {cs.SE},
-	url          = {https://arxiv.org/abs/2503.08936}
+@article{sorokin2026multisim,
+  author    = {Lev Sorokin and Matteo Biagiola and Andrea Stocco},
+  title     = {Simulator ensembles for trustworthy autonomous driving systems testing},
+  journal   = {Empirical Software Engineering},
+  year      = {2026},
+  volume    = {31},
+  number    = {4},
+  pages     = {80},
+  doi       = {10.1007/s10664-026-10821-7}
 }
 ```
 
